@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">SplashScreen</string>
+    <string name="app_name">Electrorate</string>
     <string name="action_settings">Settings</string>
+    <string name="Enter_Zip_Code">Or continue with ZIP Code</string>
+    <string name="Enter_Credentials">Enter your credentials below:</string>
+    <string name="Username">Username</string>
 </resources>
