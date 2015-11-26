@@ -2,8 +2,6 @@ package com.example.anton.splashscreen;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -41,7 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(v.getId()){
             case R.id.bLogin:
 
-
+                Intent startHomeScreen = new Intent(getApplicationContext(), Home.class);
+                startActivity(startHomeScreen);
 
                 break;
 
@@ -54,7 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bZip:
 
-
+                Intent startHome2Screen = new Intent(getApplicationContext(), Home2.class);
+                startActivity(startHome2Screen);
 
                 break;
 
@@ -77,6 +77,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent startSettings = new Intent(getApplicationContext(), Settings.class);
+            startActivity(startSettings);
             return true;
         }
 

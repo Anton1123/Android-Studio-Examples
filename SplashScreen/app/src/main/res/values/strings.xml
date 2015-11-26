@@ -4,4 +4,7 @@
     <string name="Enter_Zip_Code">Or continue with ZIP Code</string>
     <string name="Enter_Credentials">Enter your credentials below:</string>
     <string name="Username">Username</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_home2">Home2</string>
+    <string name="title_activity_settings">Settings</string>
 </resources>
