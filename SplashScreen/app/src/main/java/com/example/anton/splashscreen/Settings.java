@@ -32,6 +32,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
             case R.id.logout:
 
                 Intent startMain = new Intent(getApplicationContext(), MainActivity.class);
+                startMain.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(startMain);
 
                 break;
