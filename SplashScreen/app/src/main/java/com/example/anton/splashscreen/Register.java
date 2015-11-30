@@ -1,12 +1,13 @@
 package com.example.anton.splashscreen;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Register extends AppCompatActivity /*implements View.OnClickListener*/ {
+public class Register extends AppCompatActivity implements View.OnClickListener {
 
     Button newRegister;
     EditText newFirstname, newLastname, newAge, newZIP, newUsername, newPassword;
@@ -22,17 +23,20 @@ public class Register extends AppCompatActivity /*implements View.OnClickListene
         newZIP = (EditText) findViewById(R.id.newZIP);
         newUsername = (EditText) findViewById(R.id.newUsername);
         newPassword = (EditText) findViewById(R.id.newPassword);
+        newRegister = (Button) findViewById(R.id.newRegister);
 
-//        newRegister.setOnClickListener(this);
+        newRegister.setOnClickListener(this);
     }
 
-   /* @Override
+    @Override
     public void onClick(View v) {
-        switch ((v.getId())){
+        switch (v.getId()) {
             case R.id.newRegister:
 
+                Intent startHome2 = new Intent(getApplicationContext(), Home2.class);
+                startActivity(startHome2);
 
                 break;
         }
-    }*/
+    }
 }

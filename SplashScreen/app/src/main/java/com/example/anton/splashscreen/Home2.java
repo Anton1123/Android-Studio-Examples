@@ -6,8 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
-public class Home2 extends AppCompatActivity {
+public class Home2 extends AppCompatActivity implements View.OnClickListener{
+
+    Button refresh2, details2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +22,29 @@ public class Home2 extends AppCompatActivity {
         assert getSupportActionBar() != null;
         getSupportActionBar().setTitle("Home2");
 
+        refresh2 = (Button) findViewById(R.id.refresh2);
+        details2 = (Button) findViewById(R.id.details2);
+        refresh2.setOnClickListener(this);
+        details2.setOnClickListener(this);
+
     }
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.refresh2:
+
+                Intent startHome = new Intent(getApplicationContext(), Home.class);
+                startActivity(startHome);
+                break;
+
+            case R.id.details2:
+
+                Intent startDetails = new Intent(getApplicationContext(), Details.class);
+                startActivity(startDetails);
+                break;
+        }
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
